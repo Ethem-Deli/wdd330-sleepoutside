@@ -27,3 +27,8 @@ export function getParam(param) {
   const urlParams = new URLSearchParams(queryString);
   return urlParams.get(param);
 }
+export function getColorNames(colors) {
+  return Array.isArray(colors)
+    ? colors.map(c => c.ColorName).join(', ')
+    : "N/A";
+}
